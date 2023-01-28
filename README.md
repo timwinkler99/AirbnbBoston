@@ -85,3 +85,8 @@ For the other categorical and numerical features we create dummies and fill miss
 ## Result Evaluation
 
 The rsquared on the training data was 0.4704.  The rsquared on the test data was 0.2789. Obviously, there is lot of space to improve this model, for example adding additional features, like no of pictures from the offered space, the quality of those picture, the quality of furniture, etc.
+
+## Licnesing, Authors, and Acknowledgements
+
+- Data Source: [Boston Airbnb Open Data](https://www.kaggle.com/datasets/airbnb/boston?resource=download)
+- 
