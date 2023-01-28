@@ -44,7 +44,7 @@ Adressing question #3 is more complex than questions #1 & #2. The goal is to use
 
 | Feature                           | Current Format | Target Format                       |
 |-----------------------------------|----------------|-------------------------------------|
-| id                                | int (=index)   |                                     |
+| id                                | int            | int                                 |
 | last_scraped                      | object         | date (to calc. diff with host since)|
 | host_since                        | object         | datediff until 2016-09-07 in days   |
 | host_response_time                | object         | categorical                         |
@@ -52,7 +52,6 @@ Adressing question #3 is more complex than questions #1 & #2. The goal is to use
 | host_acceptance_rate              | object (in %)  | float                               |
 | host_is_superhost                 | object         | categorical                         |
 | host_listings_count               | int            | int                                 |
-| host_verifications                | object (list)  | categorical                         |
 | host_has_profile_pic              | object         | categorical                         |
 | host_identity_verified            | object         | categorical                         |
 | neighbourhood_cleansed            | object         | categorical                         |
@@ -78,4 +77,9 @@ Adressing question #3 is more complex than questions #1 & #2. The goal is to use
 | cancellation_policy               | object         | categorical                         |
 | reviews_per_month                 | int            | int                                 |
 
-Note: the model can be augmented using features like lenght of description in words
+Depending on the features current format, we have to make some changes (e.g., host_since_days, all kinds of rates and dollar amounts, set of amenities, cleaning_fee).
+For the other categorical and numerical features we create dummies and fill missing values with the feature columns mean respectively.
+
+## Result Evaluation
+
+The rsquared on the training data was 0.4704.  The rsquared on the test data was 0.2789.
