@@ -1,5 +1,7 @@
 # Airbnb Boston Analysis
 
+Link to blog post: [here](https://medium.com/@timwinkler99/data-driven-thoughts-on-subletting-your-space-in-boston-on-airbnb-a5d242df0107)
+
 In this notebook I am going to analyse the [Boston Airbnb Open Data](https://www.kaggle.com/datasets/airbnb/boston?resource=download) dataset. This analysis is divided into 5 steps:
 
 - [Business Understanding](#business-understanding)
