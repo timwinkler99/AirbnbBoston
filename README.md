@@ -98,4 +98,3 @@ The rsquared on the training data was 0.4704.  The rsquared on the test data was
 ## Licnesing, Authors, and Acknowledgements
 
 - Data Source: [Boston Airbnb Open Data](https://www.kaggle.com/datasets/airbnb/boston?resource=download)
-- 
