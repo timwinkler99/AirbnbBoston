@@ -29,16 +29,23 @@ There are 3 files available for this anlysis:
 
 Details about the dataset can be found in this [sheet](https://docs.google.com/spreadsheets/d/1iWCNJcSutYqpULSQHlNyGInUvHg2BoUGoNRIGa6Szc4/edit#gid=982310896)
 
+### Question 1:
+
 To address question #1 we could obtain average prices for each liststing and average these again over the neigbourhood, which has already been polished up in column `neighbourhood_group_cleansed`.
 
 Popular listings are already booked well ahead and therefore no price is available in the `calendar.csv` file. In fact for 50.87% of all days, the actual price is not available. Even tough for some listsings the price is the same troughout the year (34.65%), for the majority of listsings the price varies. To account for that I will fill the missing values with using a linear interpolation.For those dates and listsings which do not have a price available at the beginning of the period I apply a backward fill.
 
 ![](mean_price_neighbor.jpeg)
 
+There is quite a significant difference in price between Mattapan and Leather District. Average annual prices per neighbourhood increase steadily, however there is a significantly large difference between Mission Hill and Charlestown.
+
+### Question 2:
+
 For question #2 I will calculate daily means across all listings which have at least one price.
 
 ![](mean_price_per_night.jpeg)
 
+Prices from April-November are particularly high. The peak in April is most likely related to the [Boston Marathon](https://www.baa.org/races/boston-marathon).
 
 ## Data Modeling
 
@@ -83,6 +90,8 @@ Depending on the features current format, we have to make some changes (e.g., ho
 For the other categorical and numerical features we create dummies and fill missing values with the feature columns mean respectively.
 
 ## Result Evaluation
+
+### Question 3:
 
 The rsquared on the training data was 0.4704.  The rsquared on the test data was 0.2789. Obviously, there is lot of space to improve this model, for example adding additional features, like no of pictures from the offered space, the quality of those picture, the quality of furniture, etc.
 
